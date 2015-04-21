@@ -1,9 +1,13 @@
 var tessel = require('tessel'),
-    Trellis = require('trellis'),
-    reBloc = require('./rebloc'),
+    Trellis = require('trellis-tessel'),
+    Rebloc = require('./rebloc'),
     trellis;
 
 trellis = Trellis(tessel.port['B'], true);
-trellis.ready(function(trellis) {
-  reBloc.start(trellis);
+trellis.ready(function() {
+  var rebloc = Rebloc(trellis);
+  rebloc.start();
+  rebloc.on('gameover', function() {
+    console.log('gameover');
+  });
 });

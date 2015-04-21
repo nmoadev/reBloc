@@ -1,0 +1,31 @@
+{
+  "name": "reBloc",
+  "version": "1.0.0",
+  "description": "A memory game",
+  "main": "index.js",
+  "dependencies": {
+    "trellis-tessel": ""
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nmoadev/reBloc.git"
+  },
+  "keywords": [
+    "game",
+    "tessel"
+  ],
+  "author": "nmoadev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nmoadev/reBloc/issues"
+  },
+  "homepage": "https://github.com/nmoadev/reBloc"
+}
