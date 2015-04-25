@@ -96,7 +96,7 @@ Rebloc = function Rebloc(trellis) {
   
     _rebloc.lastTimeout = setTimeout(function() {
         // Remove the event listener
-        _rebloc.trellis.button(index.i, index.j).removeListener('press', _rebloc.pressCallback);
+        _rebloc.trellis.button(index.i, index.j).removeListener('press', _rebloc.onButtonPress);
         // End the game
         rebloc.emit('gameover', _rebloc.rounds);
     },_rebloc.delay);
@@ -130,7 +130,9 @@ Rebloc = function Rebloc(trellis) {
     }
 
     // Setup of an event handler so that the game can be restarted by pressing any key
-    _rebloc.trellis.once('keydata', rebloc.start);
+    setTimeout(function() {
+      _rebloc.trellis.once('keydata', rebloc.start);
+    }, 1000);
   };
 
 
